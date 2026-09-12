@@ -27,6 +27,10 @@ class Solution:
             number //= 5
         return count
 
-number = int(input("number: "))
-solution = Solution()
-print(solution.find_tailing_zeroes(number))
+def main():
+    number = int(input("number: "))
+    solution = Solution()
+    print(solution.find_tailing_zeroes(number))
+
+if __name__ == "__main__":
+    main()

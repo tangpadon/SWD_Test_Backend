@@ -20,4 +20,21 @@ output = list can not blank
 class Solution:
 
     def find_max_index(self, numbers: list) -> int | str:
-        pass
+        max_index = 0
+        for i in range(1, len(numbers)):
+            if numbers[i] > numbers[max_index]:
+                max_index = i
+        return max_index
+
+def main():
+    solution = Solution()
+    user_input = input("List of Numbers with comma-separated: ").strip()
+
+    if not user_input:
+        print("list can not blank")
+    else:
+        numbers = [int(x) for x in user_input.split(",")]
+        print(solution.find_max_index(numbers))
+
+if __name__ == "__main__":
+    main()
