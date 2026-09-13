@@ -57,20 +57,20 @@ class Solution:
             else:
                 num_text += th_digits[digit] + th_positions[position]
 
-        return "Output = " + num_text
+        return num_text
 
 
 def main():
     solution = Solution()
-    raw_input = input("Input number: ").strip()
+    user_input = input("Input number: ").strip()
 
-    if not raw_input:
+    if not user_input:
         print("number can not blank")
         return
 
     try:
-        user_input = int(raw_input)
-        print(solution.number_to_thai(user_input))
+        user_input = int(user_input)
+        print("Output = " + solution.number_to_thai(user_input))
     except ValueError:
         print("number must be an integer")
 

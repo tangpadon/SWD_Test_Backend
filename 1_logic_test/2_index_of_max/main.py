@@ -33,8 +33,11 @@ def main():
     if not user_input:
         print("list can not blank")
     else:
-        numbers = [int(x) for x in user_input.split(",")]
-        print(solution.find_max_index(numbers))
+        try:
+            numbers = [int(x) for x in user_input.split(",")]
+            print("Output = " + str(solution.find_max_index(numbers)))
+        except ValueError:
+            print("list can only contain numbers")
 
 if __name__ == "__main__":
     main()

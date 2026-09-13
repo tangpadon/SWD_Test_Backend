@@ -28,9 +28,12 @@ class Solution:
         return count
 
 def main():
-    number = int(input("number: "))
     solution = Solution()
-    print(solution.find_tailing_zeroes(number))
+    try:
+        number = int(input("number: "))
+        print("Output = " + str(solution.find_tailing_zeroes(number)))
+    except ValueError:
+        print("number can only be an integer")
 
 if __name__ == "__main__":
     main()
