@@ -31,7 +31,7 @@ class StudentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ClassroomSerializer(serializers.ModelSerializer):
-    teachers = serializers.PrimaryKeyRelatedField(queryset=Teacher.objects.all(), many=True)
+    teachers = serializers.PrimaryKeyRelatedField(queryset=Teacher.objects.all(), many=True, required=False)
 
     class Meta:
         model = Classroom
@@ -44,7 +44,7 @@ class ClassroomSerializer(serializers.ModelSerializer):
         return data
 
 class TeacherSerializer(serializers.ModelSerializer):
-    classrooms = serializers.PrimaryKeyRelatedField(queryset=Classroom.objects.all(), many=True)
+    classrooms = serializers.PrimaryKeyRelatedField(queryset=Classroom.objects.all(), many=True, required=False)
 
     class Meta:
         model = Teacher
