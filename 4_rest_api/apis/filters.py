@@ -22,18 +22,18 @@ class TeacherFilter(FilterSet):
     class Meta:
         model = Teacher
         fields = {
-            'classrooms_school': ['exact'],
+            'classrooms__school': ['exact'],
             'classrooms' : ['exact'],
             'firstname': ['exact'],
             'lastname': ['exact'],
-            'gener': ['exact'],
+            'gender': ['exact'],
         }
 
 class StudentFilter(FilterSet):
     class Meta:
         model = Student
         fields = {
-            'classroom_school': ['exact'],
+            'classroom__school': ['exact'],
             'classroom' : ['exact'],
             'firstname': ['exact'],
             'lastname': ['exact'],
