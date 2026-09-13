@@ -40,3 +40,5 @@ def process_payment(payload: PaymentRequest, idempotency_key: str = Header(...))
 
 print("Server is running on http://127.0.0.1:8000/docs")
 `````
+- ถ้า Key ไม่ซ้ำจะสร้างรายการใหม่และบันทึกไว้
+- ถ้า Key ซ้ำจะไม่สร้างรายการใหม่
